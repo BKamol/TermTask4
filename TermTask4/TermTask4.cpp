@@ -176,36 +176,6 @@ bool correct_formula_b()
 
 }
 
-//string convert_a_to_b(string formula)
-//{
-//	string elementary_formula;
-//	string temp;
-//	int ind = has_right_combination(formula, ")");
-//	while (ind != -1) //Пока есть скобка
-//	{
-//		elementary_formula = "";
-//		temp = "";
-//		if (formula[ind - 2] == '(') //Если в скобках слева от операции элементарная формула в скобочной записи
-//		{
-//			for (int i = -2; i <= 4; i++) elementary_formula += formula[ind + i];
-//			temp += elementary_formula[3];
-//			temp += elementary_formula[1];
-//			temp += elementary_formula[5];
-//		}
-//		else //если слева от операции выражение в бесскобочной записи
-//		{
-//			for (int i = -4; i <= 10; i++) elementary_formula += formula[ind + i];
-//			temp += elementary_formula[5];
-//			for (int i = 1; i <= 3; i++) temp += elementary_formula[i];
-//			for (int i = 7; i <= 13; i++) temp += elementary_formula[i];
-//		}
-//		formula = replace(formula, elementary_formula, temp);
-//		cout << formula << endl;
-//		ind = has_right_combination(formula, ")");
-//	}
-//	return formula;
-//}
-
 string convert_a_to_b(string formula)
 {
 	int is_bracket;
@@ -273,9 +243,9 @@ string convert_a_to_b(string formula)
 
 int main()
 {
-	//cout << correct_formula();
-	//cout << correct_formula_b();
-	cout << convert_a_to_b("((1)+(2))-((3)+(4))");
+	//cout << correct_formula_a();
+	cout << correct_formula_b();
+	//cout << convert_a_to_b("((1)+(2))-(((1)-(2))*((3)+(4)))");
 
 }
 
